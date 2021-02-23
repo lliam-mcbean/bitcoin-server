@@ -7,7 +7,7 @@ app.listen(
     () => console.log('hello')
 )
 
-app.get('/public', (req, res) => {
-    res.status(200).send(importdata)
+app.get('/', (req, res) => {
+    res.send(importdata)
 })
 
