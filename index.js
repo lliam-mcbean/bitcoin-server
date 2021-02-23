@@ -8,6 +8,10 @@ app.listen(
 )
 
 app.get('/', (req, res) => {
+    res.send('hello')
+})
+
+app.get('/public', (req, res) => {
     res.send(importdata)
 })
 
