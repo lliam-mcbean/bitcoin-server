@@ -84,7 +84,7 @@ let numericalBitcoinPrice = 0
 
 $.ajax({
     type: "GET",
-    url: "http://localhost:3000/public",
+    url: "https://pure-cliffs-92694.herokuapp.com/public",
     dataType: "json",
     success: function(data) {
         let count = 0
