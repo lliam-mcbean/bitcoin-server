@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000
 const fs = require('fs')
 const results = [];
 
-fs.createReadStream('data.csv')
+fs.createReadStream('bitcoin_csv.csv')
   .pipe(csv())
   .on('data', (data) => results.push(data))
 
