@@ -1,4 +1,5 @@
-const app = require('express')()
+const express = require('express')
+const app = express()
 const csv = require('csv-parser')
 const PORT = process.env.PORT || 3000
 
@@ -9,11 +10,13 @@ fs.createReadStream('bitcoin_csv.csv')
   .pipe(csv())
   .on('data', (data) => results.push(data))
 
+app.use(express.static('src'))
+
 app.listen(
     PORT,
     () => console.log('hello')
 )
 
-app.get('/', (req, res) => {
+app.get('/public', (req, res) => {
     res.send(results)
 })
