@@ -11,7 +11,6 @@ app.get('/', (req, res) => {
     res.send(results)
 })
 
-const csv = require('csv-parser')
 const fs = require('fs')
 const results = [];
 
